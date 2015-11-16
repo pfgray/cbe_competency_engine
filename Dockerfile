@@ -22,6 +22,7 @@ RUN /usr/sbin/mysqld & \
     echo "GRANT ALL ON *.* TO cbeuser@'%' IDENTIFIED BY 'cbepswd' WITH GRANT OPTION; FLUSH PRIVILEGES" | mysql
 
 ADD ./ /apps/cbe_competency_engine
+ADD ./docker/tool_registration.rb /apps/LTI2-Reference/lti2_tc/app/models/lti2_tc/tool_registration.rb
 
 WORKDIR /apps/cbe_competency_engine
 
